@@ -131,6 +131,11 @@ Check logs for lines like:
 'Water Consumption': Received new state 258.329
 ```
 
+## Notable Defaults
+
+- **WPA3** is enforced for Wi-Fi authentication (`min_auth_mode: WPA3`). If your router does not support WPA3, change this to `WPA2` in the YAML.
+- **Bluetooth Proxy** is enabled by default, turning the device into a BT signal repeater for Home Assistant. If not needed, comment out the `esp32_ble_tracker` and `bluetooth_proxy` sections in the YAML.
+
 ## References
 
 - [ESPHome Documentation](https://esphome.io)
