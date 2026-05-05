@@ -11,7 +11,7 @@ esphome:
     upload_speed: 921600
 
 external_components:
-  - source: github://SzczepanLeon/esphome-components@main
+  - source: github://vistalba/esphome-components@main
     components:
       - wmbus_radio
       - wmbus_meter
