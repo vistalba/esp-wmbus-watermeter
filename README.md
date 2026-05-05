@@ -7,7 +7,7 @@ ESPHome configuration for reading encrypted **Wireless M-Bus (wMBus)** water met
 | Component | Description | Link |
 |---|---|---|
 | M5Stack Unit C6L | ESP32-C6 + SX1262, 868 MHz LoRa, OLED, RGB LED | [Docs](https://docs.m5stack.com/en/unit/Unit_C6L) |
-| Water Meter | Sensus iPERL (wMBus T1, encrypted) | — |
+| Water Meter | Sensus iPERL (wMBus T1, encrypted) | [Docs](https://www.xylem.com/el-gr/products--services/metrology-equipment-for-utilities/meters/iperl-international-water-meter/) |
 
 ### Why Unit C6L?
 - ESP32-C6 with native Wi-Fi 6
