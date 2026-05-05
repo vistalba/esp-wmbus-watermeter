@@ -95,6 +95,7 @@ wmbus_radio:
   rx_gain: BOOSTED
   rf_switch: false
   has_tcxo: true
+# Uncomment for troubleshooting – logs every received frame raw
 #  on_frame:
 #    - then:
 #        - logger.log:
