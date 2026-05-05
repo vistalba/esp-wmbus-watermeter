@@ -104,6 +104,20 @@ OTA updates work normally via the ESPHome dashboard after the first flash.
 | Build fails with CMake error | Corrupt build cache | ESPHome Dashboard → Clean Build Files |
 | `esp32` component conflict | External component overrides internal | Ensure `components:` list is explicit in `external_components` |
 
+### Raw frame logging
+
+To verify the radio receives anything at all, uncomment the `on_frame` block in `wmbus_radio`:
+
+```yaml
+  on_frame:
+    - then:
+        - logger.log:
+            format: "Frame! RSSI: %ddBm Data: %s"
+            args: [frame->rssi(), frame->as_hex().c_str()]
+```
+
+Any received frame will appear in the logs — regardless of whether it matches your meter. If nothing appears after 1–2 minutes, check the 868 MHz antenna connection.
+
 ### Enable verbose logging temporarily
 
 ```yaml
